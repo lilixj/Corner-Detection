@@ -1,4 +1,4 @@
-# Corner-Detection
+H# Corner-Detection
 ## OpenCV corner detection
 角点检测主要应用于运动检测，图像匹配，目标跟踪，三维建模和目标识别等领域. 
 
@@ -15,7 +15,7 @@ in this tutorial we will study the corner features, specifically.
 
 ![harris](http://ow9372wwb.bkt.clouddn.com/harris1.PNG)    
 
-you can get the source code in harris file.
+you can get the source code in Harris file.
 
 >2.Shi-Tomasi conner detector;    
 
