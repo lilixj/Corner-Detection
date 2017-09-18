@@ -19,6 +19,7 @@ you can get the source code in Harris file.
 
 >2.Shi-Tomasi conner detector;    
 
->3.亚像素级 conner detector；    
-
-
+>3.亚像素级 conner detector；
+    
+    
+：ant: 觉得对您有帮助就给个小星星呀。
