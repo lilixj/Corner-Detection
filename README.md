@@ -22,4 +22,4 @@ you can get the source code in Harris file.
 >3.亚像素级 conner detector；
     
     
->>**如若，觉得对您有帮助就给个小星星呀。**
+>>**如若，对您有帮助就给个小星星呀。**
