@@ -15,10 +15,11 @@ in this tutorial we will study the corner features, specifically.
 
 ![harris](http://ow9372wwb.bkt.clouddn.com/harris1.PNG)    
 
-you can get the source code in harris file.
+you can get the source code in Harris file.
 
 >2.Shi-Tomasi conner detector;    
 
->3.亚像素级 conner detector；    
-
-
+>3.亚像素级 conner detector；
+    
+    
+>>**如若，觉得对您有帮助就给个小星星呀。**
