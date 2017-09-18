@@ -21,5 +21,5 @@ you can get the source code in Harris file.
 
 >3.亚像素级 conner detector；
     
-    
+>开发环境：opencv3.20 + visual studio 2015.
 >>**如若，对您有帮助就给个小星星呀。**
