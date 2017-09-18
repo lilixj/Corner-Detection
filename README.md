@@ -9,10 +9,12 @@
 in this tutorial we will study the corner features, specifically.
 
 >1.Harris conner detector;    
-**Result:**
-![harris](http://ow9372wwb.bkt.clouddn.com/harris1.PNG)    
+**Result:**    
 
 ![harris](http://ow9372wwb.bkt.clouddn.com/harris2.PNG)    
+
+![harris](http://ow9372wwb.bkt.clouddn.com/harris1.PNG)    
+
 you can get the source code in harris file.
 
 >2.Shi-Tomasi conner detector;    
