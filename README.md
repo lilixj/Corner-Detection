@@ -24,13 +24,13 @@ function：cornerHarris（）
 you can get the source code in Harris file.
 
 >2.Shi-Tomasi conrer detector;    
-function：goodFeaturesToTrack（）
+function：goodFeaturesToTrack（）    
 **Result:**    
 
 
 >3.亚像素级 corner detector;    
 function: cornerSubPix()    
-**Result**    
+**Result:**    
 
     
 >开发环境：opencv3.20 + visual studio 2015.
