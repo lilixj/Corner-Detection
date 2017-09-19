@@ -17,7 +17,9 @@ in this tutorial we will study the corner features, specifically.
 
 you can get the source code in Harris file.
 
->2.Shi-Tomasi conrer detector;    
+>2.Shi-Tomasi conrer detector;    
+**Result:**    
+
 
 >3.亚像素级 corner detector；
     
