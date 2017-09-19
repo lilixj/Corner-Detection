@@ -11,7 +11,7 @@ int max_thresh = 255;
 void Harris_Conner(int, void*);
 //主函数
 int main(int argc, char** argv) {
-	//读取本地图像
+	//读取图像
 	srcImage = imread("harris.png");
 	if (srcImage.empty()) {
 		cout << "could not load srcimage...\n" << endl;
