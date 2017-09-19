@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 	createTrackbar("Threshold", "HarrisConnerDetection", &thresh, max_thresh, Harris_Conner);
 	//初始化函数
 	Harris_Conner(0, 0);
-
+        //等待有键按下
 	waitKey(0);
 	return 0;
 }
