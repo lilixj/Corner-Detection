@@ -8,7 +8,7 @@
 * Blobs(also known as regions of interest)    
 in this tutorial we will study the corner features, specifically.
 
->1.Harris conner detector;    
+>1.Harris corner detector;    
 **Result:**    
 
 ![harris](http://ow9372wwb.bkt.clouddn.com/harris2.PNG)    
@@ -17,9 +17,9 @@ in this tutorial we will study the corner features, specifically.
 
 you can get the source code in Harris file.
 
->2.Shi-Tomasi conner detector;    
+>2.Shi-Tomasi conrer detector;    
 
->3.亚像素级 conner detector；
+>3.亚像素级 corner detector；
     
 >开发环境：opencv3.20 + visual studio 2015.
 >>**如若，对您有帮助就给个小星星呀。**
