@@ -1,54 +1,54 @@
-//°üº¬Í·ÎÄ¼şºÍÃüÃû¿Õ¼ä
+//åŒ…å«å¤´æ–‡ä»¶å’Œå‘½åç©ºé—´
 #include <opencv2/opencv.hpp>
 #include <iostream>
 using namespace cv;
 using namespace std;
-//È«¾Ö±äÁ¿ÉùÃ÷
+//å…¨å±€å˜é‡å£°æ˜
 Mat srcImage, grayImage, dstImage, normImage, Scalednorm, resultImage;
 int  thresh = 125;
 int max_thresh = 255;
-//È«¾Öº¯ÊıÉùÃ÷
+//å‡½æ•°å£°æ˜
 void Harris_Conner(int, void*);
-//Ö÷º¯Êı
+//ä¸»å‡½æ•°
 int main(int argc, char** argv) {
-	//¶ÁÈ¡±¾µØÍ¼Ïñ
+	//è¯»å–æœ¬åœ°å›¾åƒ
 	srcImage = imread("harris.png");
 	if (srcImage.empty()) {
 		cout << "could not load srcimage...\n" << endl;
 		return -1;
 	}
-	//´´½¨´°¿Ú
+	//åˆ›å»ºçª—å£
 	namedWindow("srcImage", WINDOW_AUTOSIZE);
-	//ÏÔÊ¾Ô­Í¼Ïñ
+	//æ˜¾ç¤ºåŸå›¾åƒ
 	imshow("srcImage", srcImage);
-	//°ÑÔ­Í¼Ïñ×ª»»³É»Ò¶ÈÍ¼
+	//æŠŠåŸå›¾åƒè½¬æ¢æˆç°åº¦å›¾
 	cvtColor(srcImage, grayImage, COLOR_BGR2GRAY);
-	//´´½¨´°¿ÚºÍ¹ö¶¯Ìõ
+	//åˆ›å»ºçª—å£å’Œæ»šåŠ¨æ¡
 	namedWindow("HarrisConnerDetection", WINDOW_AUTOSIZE);
 	createTrackbar("Threshold", "HarrisConnerDetection", &thresh, max_thresh, Harris_Conner);
-	//³õÊ¼»¯º¯Êı
+	//åˆå§‹åŒ–å‡½æ•°
 	Harris_Conner(0, 0);
 
 	waitKey(0);
 	return 0;
 }
-//È«¾Öº¯Êı¶¨Òå
+//å‡½æ•°å®šä¹‰
 void Harris_Conner(int, void*) {
-	//ÖÃÁã
+	//ç½®é›¶
 	dstImage = Mat::zeros(grayImage.size(), CV_32FC1);
-	//²ÎÊı¸³Öµ
+	//å‚æ•°èµ‹å€¼
 	int blocksize = 2;
 	int ksize = 3;
 	double k = 0.04;
-	//½øĞĞ½Çµã¼ì²â
+	//è¿›è¡Œè§’ç‚¹æ£€æµ‹
 	cornerHarris(grayImage, dstImage, blocksize, ksize, k, BORDER_DEFAULT);
-	//¹éÒ»»¯
+	//å½’ä¸€åŒ–
 	normalize(dstImage, normImage, 0, 255, NORM_MINMAX, CV_32FC1, Mat());
-	//½«¹éÒ»»¯ºóµÄÍ¼ÏßĞÔ±ä»»³É8Î»ÎŞ·ûºÅÕûĞÍ
+	//å°†å½’ä¸€åŒ–åçš„å›¾çº¿æ€§å˜æ¢æˆ8ä½æ— ç¬¦å·æ•´å‹
 	convertScaleAbs(normImage, Scalednorm);
-	//¿ËÂ¡
+	//å…‹éš†
 	resultImage = srcImage.clone();
-	//Ñ­»·±éÀúÏñËØ£¬»æÖÆ³ö±»¼ì²âµÄ½Çµã£¨Ò²¿ÉÒÔÓÃÖ¸ÕëÊµÏÖ£¬ËÙ¶ÈÏà¶Ô¿ìĞ©£©
+	//å¾ªç¯éå†åƒç´ ï¼Œç»˜åˆ¶å‡ºè¢«æ£€æµ‹çš„è§’ç‚¹ï¼ˆä¹Ÿå¯ä»¥ç”¨æŒ‡é’ˆå®ç°ï¼Œé€Ÿåº¦ç›¸å¯¹å¿«äº›ï¼‰
 	for (int i = 0; i < resultImage.rows; i++) {
 		 //uchar* pixel_i = Scalednorm.ptr(i);
 		for (int j = 0; j < resultImage.cols; j++) { 
@@ -61,7 +61,7 @@ void Harris_Conner(int, void*) {
 				//pixel_i++;
 		}
 	}
-	//ÏÔÊ¾½Çµã¼ì²âµÄ½á¹û
+	//æ˜¾ç¤ºè§’ç‚¹æ£€æµ‹çš„ç»“æœ
 	imshow("HarrisConnerDetection", resultImage);
 	imshow("Detection", Scalednorm);
 }
