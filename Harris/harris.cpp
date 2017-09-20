@@ -25,9 +25,9 @@ int main(int argc, char** argv) {
 	cvtColor(srcImage, grayImage, COLOR_BGR2GRAY);
 	//创建窗口和滚动条
 	namedWindow("HarrisCornerDetection", WINDOW_AUTOSIZE);
-	createTrackbar("Threshold", "HarrisCornerDetection", &thresh, max_thresh, Harris_Conner);
+	createTrackbar("Threshold", "HarrisCornerDetection", &thresh, max_thresh, HarrisConner_demo);
 	//初始化函数
-	Harris_Conner(0, 0);
+	HarrisConner_demo(0, 0);
         //等待有键按下
 	waitKey(0);
 	return 0;
@@ -62,6 +62,6 @@ void HarrisConner_demo(int, void*) {
 		}
 	}
 	//显示角点检测的结果
-	imshow("HarrisConnerDetection", resultImage);
+	imshow("HarrisCornerDetection", resultImage);
 	imshow("Detection", Scalednorm);
 }
