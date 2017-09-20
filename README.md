@@ -25,8 +25,11 @@ you can get the source code in Harris file.
 
 >2.Shi-Tomasi conrer detector;    
 function：goodFeaturesToTrack（）    
-**Result:**    
+**Result:** 
 
+![Shi-Tomasi](http://ow9372wwb.bkt.clouddn.com/Shi-Tomasi.PNG)    
+
+you can get the source code in Shi-Tomasi file.
 
 >3.亚像素级 corner detector;    
 function: cornerSubPix()    
