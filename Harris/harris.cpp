@@ -8,7 +8,7 @@ Mat srcImage, grayImage, dstImage, normImage, Scalednorm, resultImage;
 int  thresh = 125;
 int max_thresh = 255;
 //函数声明
-void Harris_Conner(int, void*);
+void HarrisConner_demo(int, void*);
 //主函数
 int main(int argc, char** argv) {
 	//读取图像
@@ -24,8 +24,8 @@ int main(int argc, char** argv) {
 	//把原图像转换成灰度图
 	cvtColor(srcImage, grayImage, COLOR_BGR2GRAY);
 	//创建窗口和滚动条
-	namedWindow("HarrisConnerDetection", WINDOW_AUTOSIZE);
-	createTrackbar("Threshold", "HarrisConnerDetection", &thresh, max_thresh, Harris_Conner);
+	namedWindow("HarrisCornerDetection", WINDOW_AUTOSIZE);
+	createTrackbar("Threshold", "HarrisCornerDetection", &thresh, max_thresh, Harris_Conner);
 	//初始化函数
 	Harris_Conner(0, 0);
         //等待有键按下
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
 	return 0;
 }
 //函数定义
-void Harris_Conner(int, void*) {
+void HarrisConner_demo(int, void*) {
 	//置零
 	dstImage = Mat::zeros(grayImage.size(), CV_32FC1);
 	//参数赋值
