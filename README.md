@@ -29,9 +29,19 @@ function：goodFeaturesToTrack（）
 
 ![Shi-Tomasi](http://ow9372wwb.bkt.clouddn.com/Shi-Tomasi.PNG)    
 
-you can get the source code in Shi-Tomasi file.
+you can get the source code in Shi-Tomasi file.    
 
->3.亚像素级 corner detector;    
+>3.Generic Corner Detector;    
+自定义角点检测器
+- Use the OpenCV function cv::cornerEigenValsAndVecs to find the eigenvalues and eigenvectors    
+**Result:**    
+![Harris corner detector](http://ow9372wwb.bkt.clouddn.com/Harris%20corner%20detector.PNG)
+
+- Use the OpenCV function cv::cornerMinEigenVal to find the minimum eigenvalues for corner detection.    
+![Shi Tomasi corner detector](http://ow9372wwb.bkt.clouddn.com/Shi%20Tomasi%20detector.PNG)    
+you can get the source code in Corner Detector file.
+
+>4.亚像素级 corner detector;    
 function: cornerSubPix()    
 **Result:**    
 
