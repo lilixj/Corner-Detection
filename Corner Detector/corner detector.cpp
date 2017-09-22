@@ -30,7 +30,7 @@ int main(int, char** argv)
 	int ksize = 3;
 	myHarris_dst = Mat::zeros(src_gray.size(), CV_32FC(6));
 	Mc = Mat::zeros(src_gray.size(), CV_32FC1);
-	//计算特征值
+	//计算特征值和特征向量
 	cornerEigenValsAndVecs(src_gray, myHarris_dst, blockSize, ksize, BORDER_DEFAULT);
 	//计算响应值
 	float k = 0.04;
@@ -50,7 +50,7 @@ int main(int, char** argv)
 	createTrackbar(" Quality Level:", myHarris_window, &myHarris_qualityLevel, max_qualityLevel, myHarris_function);
 	myHarris_function(0, 0);
 	myShiTomasi_dst = Mat::zeros(src_gray.size(), CV_32FC1);
-	//计算特征值
+	//计算最小特征值
 	cornerMinEigenVal(src_gray, myShiTomasi_dst, blockSize, ksize, BORDER_DEFAULT);
 	//寻找矩阵最大最小值的位置
 	minMaxLoc(myShiTomasi_dst, &myShiTomasi_minVal, &myShiTomasi_maxVal, 0, 0, Mat());
