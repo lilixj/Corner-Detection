@@ -56,7 +56,7 @@ int main(int, char** argv)
 	namedWindow(myShiTomasi_window, WINDOW_AUTOSIZE);
 	createTrackbar(" Quality Level:", myShiTomasi_window, &myShiTomasi_qualityLevel, max_qualityLevel, myShiTomasi_function);
 	myShiTomasi_function(0, 0);
-
+    //等待按键按下
 	waitKey(0);
 	return(0);
 }
