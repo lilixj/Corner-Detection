@@ -43,14 +43,16 @@ int main(int, char** argv)
 			Mc.at<float>(j, i) = lambda_1*lambda_2 - k*pow((lambda_1 + lambda_2), 2);
 		}
 	}
+	//寻找矩阵最大最小值的位置
 	minMaxLoc(Mc, &myHarris_minVal, &myHarris_maxVal, 0, 0, Mat());
     //创建窗口
 	namedWindow(myHarris_window, WINDOW_AUTOSIZE);
 	createTrackbar(" Quality Level:", myHarris_window, &myHarris_qualityLevel, max_qualityLevel, myHarris_function);
 	myHarris_function(0, 0);
-	//计算特征值
 	myShiTomasi_dst = Mat::zeros(src_gray.size(), CV_32FC1);
+	//计算特征值
 	cornerMinEigenVal(src_gray, myShiTomasi_dst, blockSize, ksize, BORDER_DEFAULT);
+	//寻找矩阵最大最小值的位置
 	minMaxLoc(myShiTomasi_dst, &myShiTomasi_minVal, &myShiTomasi_maxVal, 0, 0, Mat());
 	//创建窗口
 	namedWindow(myShiTomasi_window, WINDOW_AUTOSIZE);
