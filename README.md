@@ -32,7 +32,7 @@ function：goodFeaturesToTrack（）
 
 you can get the source code in Shi-Tomasi file.    
 
->3.Generic Corner Detector;    
+>3.Generic Corner Detector;    
 自定义角点检测器
 - Use the OpenCV function cv::cornerEigenValsAndVecs to find the eigenvalues and eigenvectors    
 **Result:**   
