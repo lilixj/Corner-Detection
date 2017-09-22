@@ -1,3 +1,4 @@
+
 # Corner-Detection
 ## OpenCV corner detection
 角点检测主要应用于运动检测，图像匹配，目标跟踪，三维建模和目标识别等领域. 
@@ -34,11 +35,15 @@ you can get the source code in Shi-Tomasi file.
 >3.Generic Corner Detector;    
 自定义角点检测器
 - Use the OpenCV function cv::cornerEigenValsAndVecs to find the eigenvalues and eigenvectors    
-**Result:**    
+**Result:**   
+
 ![Harris corner detector](http://ow9372wwb.bkt.clouddn.com/Harris%20corner%20detector.PNG)
 
-- Use the OpenCV function cv::cornerMinEigenVal to find the minimum eigenvalues for corner detection.    
+- Use the OpenCV function cv::cornerMinEigenVal to find the minimum eigenvalues for corner detection.     
+**Result:**    
+
 ![Shi Tomasi corner detector](http://ow9372wwb.bkt.clouddn.com/Shi%20Tomasi%20detector.PNG)    
+
 you can get the source code in Corner Detector file.
 
 >4.亚像素级 corner detector;    
