@@ -73,7 +73,7 @@ void cornersubPix_demo(int, void*) {
 	TermCriteria criteria = TermCriteria(TermCriteria::EPS + TermCriteria::MAX_ITER, 40, 0.001);
 	//计算亚像素级角点位置
 	cornerSubPix(grayImage, corners, winSize, zeroZone, criteria);
-	//输出精准角点坐标
+	//输出精准角点坐标信息
 	for (int i = 0; i < corners.size(); i++) {
 		cout << "["<<i<<"]" << "号角点坐标：" << "("<<corners[i].x<<", "<<corners[i].y<<")" << endl;
 	}
